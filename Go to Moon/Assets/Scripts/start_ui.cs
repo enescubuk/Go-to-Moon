@@ -18,6 +18,12 @@ public class start_ui : MonoBehaviour
     {
         transform.Rotate(0,0,15 * Time.deltaTime * rotateSpeed);
     }
+    IEnumerator startButtonDown()
+    {
+        GameObject.Find("Yellow startButtonBG").GetComponent<Animator>().SetTrigger("isTouch");
+        yield return new WaitForSecondsRealtime(0.75f);
+        SceneManager.LoadScene("Game"); 
+    }
 
     public void garageButton()
     {
@@ -34,5 +40,9 @@ public class start_ui : MonoBehaviour
     public void settingsButton()
     {
         SceneManager.LoadScene("Options");
+    }
+    public void startButton()
+    {
+        StartCoroutine(startButtonDown());
     }
 }
