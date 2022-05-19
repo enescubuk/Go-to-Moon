@@ -28,7 +28,28 @@ public class garage_Script : MonoBehaviour
     {
         
     }
-    void RigidityUpgrade()
+    public void RigidityUpgrade()
+    {
+
+
+    }
+    public void EngineUpgrade()
+    {
+
+
+
+    }
+    public void WingUpgrade()
+    {
+
+
+    }
+    public void AccelerateUpgrade()
+    {
+
+
+    }
+    public void FuelUpgrade()
     {
 
 
