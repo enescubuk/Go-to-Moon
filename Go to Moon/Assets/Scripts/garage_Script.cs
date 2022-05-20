@@ -24,6 +24,14 @@ public class garage_Script : MonoBehaviour
     public Sprite[] Body;
     public Sprite[] Heads;
 
+    [Header("RocketParts")]
+    public Sprite WingsPart;
+    public Sprite BoostersPart;
+    public Sprite EnginesPart;
+    public Sprite FuelTankPart;
+    public Sprite BodyPart;
+    public Sprite HeadsPart;
+
 
 
     void Start()
@@ -43,7 +51,27 @@ public class garage_Script : MonoBehaviour
     }
     void RocketPartCheck()
     {
-
+        if (wing % 3 == 0)
+        {
+           WingsPart = Wings[(wing / 3)];
+        }
+        if (rigidity % 3 == 0)
+        {
+            BodyPart = Body[(rigidity / 3)];
+            HeadsPart = Heads[(rigidity / 2)];
+        }
+        if (accelerate % 3 == 0)
+        {
+            BoostersPart = Boosters[(accelerate / 3)];
+        }
+        if (fuel % 3 == 0)
+        {
+            FuelTankPart = FuelTank[(fuel / 3)];
+        }
+        if (engine % 3 == 0)
+        {
+            EnginesPart = Engines[(engine / 3)];
+        }
     }
     public void RigidityUpgrade()
     {
