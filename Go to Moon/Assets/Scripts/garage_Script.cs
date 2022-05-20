@@ -16,42 +16,63 @@ public class garage_Script : MonoBehaviour
     public int accelerate;
     public int fuel;
 
+    [Header("RocketParts")]
+    public Sprite[] Wings;
+    public Sprite[] Boosters;
+    public Sprite[] Engines;
+    public Sprite[] FuelTank;
+    public Sprite[] Body;
+    public Sprite[] Heads;
+
 
 
     void Start()
     {
         
-    }
-
-    // Update is called once per frame
+    }    
     void Update()
     {
-        
+        SpecCheck();
+    }
+    void SpecCheck()
+    {
+
+        speed = (wing / 2) + (engine);
+        durability = (rigidity) + (wing);
+        duration = (rigidity / 2) + (fuel);
+    }
+    void RocketPartCheck()
+    {
+
     }
     public void RigidityUpgrade()
     {
 
+        rigidity++;
 
     }
     public void EngineUpgrade()
     {
 
-
+        engine++;
 
     }
     public void WingUpgrade()
     {
 
+        wing++;
 
     }
     public void AccelerateUpgrade()
     {
 
+        accelerate++;
 
     }
     public void FuelUpgrade()
     {
 
+        fuel++;
 
     }
 }
