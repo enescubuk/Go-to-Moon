@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class start_ui : MonoBehaviour
+public class buttonController : MonoBehaviour
 {
-    float rotateSpeed = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +14,7 @@ public class start_ui : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0,0,15 * Time.deltaTime * rotateSpeed);
+
     }
     IEnumerator startButtonDown()
     {
@@ -25,6 +23,10 @@ public class start_ui : MonoBehaviour
         SceneManager.LoadScene("Game"); 
     }
 
+    public void mainMenuButton()
+    {
+        //main menü button
+    }
     public void garageButton()
     {
         SceneManager.LoadScene("Garage");
@@ -44,5 +46,33 @@ public class start_ui : MonoBehaviour
     public void startButton()
     {
         StartCoroutine(startButtonDown());
+    }
+    public void watchADSButton()
+    {
+        //watch ADS
+    }
+    public void restartButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void backButton()
+    {
+        //back button
+    }
+    public void sfxButton()
+    {
+        //sfx open
+    }
+    public void musicButton()
+    {
+        //music on of
+    }
+    public void kmmileButton()
+    {
+        //change kmmile
+    }
+    public void languageButton()
+    {
+        //change language
     }
 }

@@ -446,8 +446,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 877912966}
-        m_TargetAssemblyTypeName: start_ui, Assembly-CSharp
+      - m_Target: {fileID: 8984440170211517051}
+        m_TargetAssemblyTypeName: buttonController, Assembly-CSharp
         m_MethodName: garageButton
         m_Mode: 1
         m_Arguments:
@@ -823,8 +823,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 877912966}
-        m_TargetAssemblyTypeName: start_ui, Assembly-CSharp
+      - m_Target: {fileID: 8984440170211517051}
+        m_TargetAssemblyTypeName: buttonController, Assembly-CSharp
         m_MethodName: purchaseButton
         m_Mode: 1
         m_Arguments:
@@ -1059,7 +1059,6 @@ GameObject:
   - component: {fileID: 877912965}
   - component: {fileID: 877912968}
   - component: {fileID: 877912967}
-  - component: {fileID: 877912966}
   m_Layer: 0
   m_Name: Meteor
   m_TagString: Untagged
@@ -1086,18 +1085,6 @@ RectTransform:
   m_AnchoredPosition: {x: 268, y: 549}
   m_SizeDelta: {x: 425.067, y: 425.067}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &877912966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877912964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac7ce4e165f548c468c4dc1fd5ca7185, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &877912967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,7 +1286,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 877912966}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: start_ui, Assembly-CSharp
         m_MethodName: startButton
         m_Mode: 1
@@ -1505,8 +1492,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 877912966}
-        m_TargetAssemblyTypeName: start_ui, Assembly-CSharp
+      - m_Target: {fileID: 8984440170211517051}
+        m_TargetAssemblyTypeName: buttonController, Assembly-CSharp
         m_MethodName: leaderboardsButton
         m_Mode: 1
         m_Arguments:
@@ -1821,8 +1808,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 877912966}
-        m_TargetAssemblyTypeName: start_ui, Assembly-CSharp
+      - m_Target: {fileID: 8984440170211517051}
+        m_TargetAssemblyTypeName: buttonController, Assembly-CSharp
         m_MethodName: settingsButton
         m_Mode: 1
         m_Arguments:
@@ -2000,3 +1987,71 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &8984440170211517050
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 903345410955364463, guid: 8688d2c935fc73b42843e6e86eb5f76e, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 903345410955364463, guid: 8688d2c935fc73b42843e6e86eb5f76e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 903345410955364463, guid: 8688d2c935fc73b42843e6e86eb5f76e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 903345410955364463, guid: 8688d2c935fc73b42843e6e86eb5f76e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 903345410955364463, guid: 8688d2c935fc73b42843e6e86eb5f76e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 903345410955364463, guid: 8688d2c935fc73b42843e6e86eb5f76e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 903345410955364463, guid: 8688d2c935fc73b42843e6e86eb5f76e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 903345410955364463, guid: 8688d2c935fc73b42843e6e86eb5f76e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 903345410955364463, guid: 8688d2c935fc73b42843e6e86eb5f76e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 903345410955364463, guid: 8688d2c935fc73b42843e6e86eb5f76e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 903345410955364463, guid: 8688d2c935fc73b42843e6e86eb5f76e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3737109155279842517, guid: 8688d2c935fc73b42843e6e86eb5f76e, type: 3}
+      propertyPath: m_Name
+      value: buttonController
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8688d2c935fc73b42843e6e86eb5f76e, type: 3}
+--- !u!114 &8984440170211517051 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3312024287623420901, guid: 8688d2c935fc73b42843e6e86eb5f76e, type: 3}
+  m_PrefabInstance: {fileID: 8984440170211517050}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7ce4e165f548c468c4dc1fd5ca7185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
