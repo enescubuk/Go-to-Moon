@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class garage_Script : MonoBehaviour
 {
+    [SerializeField] int maxValue;
     [Header("Specs")]
     public int speed;
     public int durability;
@@ -25,12 +26,12 @@ public class garage_Script : MonoBehaviour
     public Sprite[] Heads;
 
     [Header("RocketParts")]
-    public Sprite WingsPart;
-    public Sprite BoostersPart;
-    public Sprite EnginesPart;
-    public Sprite FuelTankPart;
-    public Sprite BodyPart;
-    public Sprite HeadsPart;
+    public GameObject WingsPart;
+    public GameObject BoostersPart;
+    public GameObject EnginesPart;
+    public GameObject FuelTankPart;
+    public GameObject BodyPart;
+    public GameObject HeadsPart;
 
 
 
@@ -41,6 +42,8 @@ public class garage_Script : MonoBehaviour
     void Update()
     {
         SpecCheck();
+        //
+        RocketPartCheck();
     }
     void SpecCheck()
     {
@@ -53,54 +56,69 @@ public class garage_Script : MonoBehaviour
     {
         if (wing % 3 == 0)
         {
-           WingsPart = Wings[(wing / 3)];
+           WingsPart.GetComponent<SpriteRenderer>().sprite = Wings[(wing / 3)];
         }
         if (rigidity % 3 == 0)
         {
-            BodyPart = Body[(rigidity / 3)];
-            HeadsPart = Heads[(rigidity / 2)];
+            BodyPart.GetComponent<SpriteRenderer>().sprite = Body[(rigidity / 3)];
+            HeadsPart.GetComponent<SpriteRenderer>().sprite = Heads[(rigidity / 3)];
         }
         if (accelerate % 3 == 0)
         {
-            BoostersPart = Boosters[(accelerate / 3)];
+            BoostersPart.GetComponent<SpriteRenderer>().sprite = Boosters[(accelerate / 3)];
         }
         if (fuel % 3 == 0)
         {
-            FuelTankPart = FuelTank[(fuel / 3)];
+            FuelTankPart.GetComponent<SpriteRenderer>().sprite = FuelTank[(fuel / 3)];
         }
         if (engine % 3 == 0)
         {
-            EnginesPart = Engines[(engine / 3)];
+            EnginesPart.GetComponent<SpriteRenderer>().sprite = Engines[(engine / 3)];
         }
     }
     public void RigidityUpgrade()
     {
-
-        rigidity++;
+        if (rigidity < maxValue)
+        {
+            rigidity++;
+        }
+        
 
     }
     public void EngineUpgrade()
     {
-
-        engine++;
+        if (engine < maxValue)
+        {
+            engine++;
+        }
+        
 
     }
     public void WingUpgrade()
     {
-
-        wing++;
+        if (wing < maxValue)
+        {
+            wing++;
+        }
+        
 
     }
     public void AccelerateUpgrade()
     {
-
-        accelerate++;
+        if (accelerate < maxValue)
+        {
+            accelerate++;
+        }
+        
 
     }
     public void FuelUpgrade()
     {
-
-        fuel++;
+        if (fuel < maxValue)
+        {
+            fuel++;
+        }
+        
 
     }
 }
