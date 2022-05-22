@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6608477811741905240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6608477811741905246}
+  - component: {fileID: 6608477811741905241}
+  m_Layer: 0
+  m_Name: GarageManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6608477811741905246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608477811741905240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1000, y: 0, z: 1100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6608477811741905241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608477811741905240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ef0f8d618a5584085baeb7f6943c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxValue: 8
+  speed: 0
+  durability: 0
+  duration: 0
+  rigidity: 0
+  engine: 0
+  wing: 0
+  accelerate: 0
+  fuel: 0
+  Wings:
+  - {fileID: 21300000, guid: 4db4886075944a7418318466ebf205e9, type: 3}
+  - {fileID: 21300000, guid: c16296622b27c9e4faace595925ffec8, type: 3}
+  - {fileID: 21300000, guid: f9c607b9c7739f24ebd09b406d99b698, type: 3}
+  Boosters:
+  - {fileID: 21300000, guid: e7a65b14a18b1ff4dbebff63a06bd6e5, type: 3}
+  - {fileID: 21300000, guid: 15ca569bb0706a04e85467fef378de66, type: 3}
+  Engines:
+  - {fileID: 21300000, guid: 131805914de5cae4e9d04ebe7d8240bd, type: 3}
+  - {fileID: 21300000, guid: fd6f615d2d9bf4b45905a9d1beb1ba65, type: 3}
+  - {fileID: 21300000, guid: 78a844fdd06e1d34683cb47c1a5015b2, type: 3}
+  FuelTank:
+  - {fileID: 21300000, guid: 38a9ca2c658f8314694de60fd6c127b5, type: 3}
+  - {fileID: 21300000, guid: 25ba6cffc941c6049904ae74f39fc47b, type: 3}
+  - {fileID: 21300000, guid: 6fb8dd866a6343f4b84bea251943cdb8, type: 3}
+  Body:
+  - {fileID: 21300000, guid: b2f45002c6149cf43bc12a506295ca9f, type: 3}
+  - {fileID: 21300000, guid: d70a9de16aede4745a7ed30eaaf866d6, type: 3}
+  - {fileID: 21300000, guid: 4606572cb7af8bb43bf0b1388150e850, type: 3}
+  Heads:
+  - {fileID: 21300000, guid: 599f97b334c7a364fb896ec397721478, type: 3}
+  - {fileID: 21300000, guid: f69312bc3edc8994cb38759ba0e8c012, type: 3}
+  - {fileID: 21300000, guid: d717eefbaa78576459d30d423e325a48, type: 3}
+  WingsPart: {fileID: 0}
+  BoostersPart: {fileID: 0}
+  EnginesPart: {fileID: 0}
+  FuelTankPart: {fileID: 0}
+  BodyPart: {fileID: 0}
+  HeadsPart: {fileID: 0}
