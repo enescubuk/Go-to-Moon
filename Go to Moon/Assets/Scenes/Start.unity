@@ -1059,6 +1059,7 @@ GameObject:
   - component: {fileID: 877912965}
   - component: {fileID: 877912968}
   - component: {fileID: 877912967}
+  - component: {fileID: 877912966}
   m_Layer: 0
   m_Name: Meteor
   m_TagString: Untagged
@@ -1085,6 +1086,25 @@ RectTransform:
   m_AnchoredPosition: {x: 268, y: 549}
   m_SizeDelta: {x: 425.067, y: 425.067}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &877912966
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877912964}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea07f44d517828949896732b7ba11af9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &877912967
 MonoBehaviour:
   m_ObjectHideFlags: 0
