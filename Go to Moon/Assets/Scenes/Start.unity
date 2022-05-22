@@ -1286,8 +1286,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: start_ui, Assembly-CSharp
+      - m_Target: {fileID: 8984440170211517051}
+        m_TargetAssemblyTypeName: buttonController, Assembly-CSharp
         m_MethodName: startButton
         m_Mode: 1
         m_Arguments:
