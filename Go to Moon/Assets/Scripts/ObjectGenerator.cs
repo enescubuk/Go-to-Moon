@@ -33,6 +33,7 @@ public class ObjectGenerator : MonoBehaviour
         oilInstantiate();
         technicInstantiate();
         balloonInstantiate();
+        helicopterInstantiate();
     }
 
     void coinInstantiate()

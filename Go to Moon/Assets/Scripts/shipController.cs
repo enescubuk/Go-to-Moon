@@ -7,15 +7,16 @@ using UnityEngine.UI;
 public class shipController : MonoBehaviour
 {
     private Rigidbody2D rb;
-    
+
+    public fuelIndicator FuelIndicator;
     public Slider heightSlider;
     public float speed;
     public int coin;
     public Text coinText;
     public int deadCount; // BIRD,HELICOPTER, BALOON
-    public int fuel = 100;
+    public float fuel;
     public Vector2 shipStartPosition;
-    private float dist;
+    public float dist;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,6 +31,7 @@ public class shipController : MonoBehaviour
         transform.position = position;
         anger();
         shipDistance();
+        fuel = dist * 5;
     }
     void anger()
     {
@@ -52,7 +54,7 @@ public class shipController : MonoBehaviour
         if (col.gameObject.tag == "Bird")
         {
             deadCount += 1;
-            if (deadCount>=3)
+            if (deadCount>3)
             {
                 deadCount = 0;
             }
@@ -61,6 +63,7 @@ public class shipController : MonoBehaviour
         if (col.gameObject.tag == "GasTank")
         {
             fuel = 100;
+            Destroy(col.gameObject);
         }
         if (col.gameObject.tag == "Oil")
         {
@@ -71,11 +74,12 @@ public class shipController : MonoBehaviour
             {
                 fuel = 100;
             }
+            Destroy(col.gameObject);
         }
         if (col.gameObject.tag == "Helicopter")
         {
             deadCount += 1;
-            if (deadCount>=3)
+            if (deadCount>3)
             {
                 deadCount = 0;
             }
@@ -84,7 +88,7 @@ public class shipController : MonoBehaviour
         if (col.gameObject.tag == "Balloon")
         {
             deadCount += 1;
-            if (deadCount>=3)
+            if (deadCount>3)
             {
                 deadCount = 0;
             }
