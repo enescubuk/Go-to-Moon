@@ -6,9 +6,9 @@ public class garage_Script : MonoBehaviour
 {
     [SerializeField] int maxValue;
     [Header("Specs")]
-    public int speed;
-    public int durability;
-    public int duration;
+    public float speed;
+    public float durability;
+    public float duration;
 
     [Header("Upgrades")]
     public int rigidity;
@@ -34,7 +34,21 @@ public class garage_Script : MonoBehaviour
     public GameObject HeadsPart;
 
 
+    private void Awake()
+    {
+        speed = PlayerPrefs.GetFloat("speed");
+        durability = PlayerPrefs.GetFloat("durabilty");
+        duration = PlayerPrefs.GetFloat("duration");
 
+
+        rigidity = PlayerPrefs.GetInt("rigidity");
+        engine = PlayerPrefs.GetInt("engine");
+        wing = PlayerPrefs.GetInt("wing");
+        accelerate = PlayerPrefs.GetInt("accelerate");
+        fuel = PlayerPrefs.GetInt("fuel");
+
+
+    }
     void Start()
     {
         
@@ -44,6 +58,27 @@ public class garage_Script : MonoBehaviour
         SpecCheck();
         //
         RocketPartCheck();
+        PlayerPrefsFunc();
+    }
+
+    void PlayerPrefsFunc()
+    {
+
+        PlayerPrefs.SetFloat("speed",speed);
+        PlayerPrefs.SetFloat("durability", durability);
+        PlayerPrefs.SetFloat("duration", duration);
+
+
+        //
+
+        PlayerPrefs.SetInt("rigidity", rigidity);
+        PlayerPrefs.SetInt("engine", engine);
+        PlayerPrefs.SetInt("wing", wing);
+        PlayerPrefs.SetInt("accelerate", accelerate);
+        PlayerPrefs.SetInt("fuel", fuel);
+        
+
+
     }
     void SpecCheck()
     {
