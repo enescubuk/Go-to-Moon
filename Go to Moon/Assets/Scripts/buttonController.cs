@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class buttonController : MonoBehaviour
 {
+    static string lastScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,7 +58,7 @@ public class buttonController : MonoBehaviour
     }
     public void backButton()
     {
-        //back button
+        SceneManager.LoadScene(lastScene);
     }
     public void sfxButton()
     {
@@ -74,5 +75,9 @@ public class buttonController : MonoBehaviour
     public void languageButton()
     {
         //change language
+    }
+    public void lastScenewithButton()
+    {
+        lastScene = SceneManager.GetActiveScene().name;
     }
 }
