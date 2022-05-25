@@ -54,6 +54,7 @@ public class buttonController : MonoBehaviour
     }
     public void restartButton()
     {
+        //restart
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void backButton()
