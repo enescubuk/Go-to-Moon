@@ -17,7 +17,8 @@ public class shipController : MonoBehaviour
     public float fuel;
     public Vector2 shipStartPosition;
     public float dist;
-    public bool gasTankBool;
+    public float shipHot;
+    public bool shipHotControl;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,10 +31,12 @@ public class shipController : MonoBehaviour
         Vector2 movement = new Vector2(hor * speed,position.y+=(speed/100));
         rb.AddForce(movement);
         transform.position = position;
+        
         anger();
         shipDistance();
+        shipHotCont();
         fuel +=0.1f;
-        Debug.Log(fuel);
+        Debug.Log(dist);
 
     }
     void anger()
@@ -107,16 +110,38 @@ public class shipController : MonoBehaviour
     public void SpeedUpButton()
     {
         speed *= 2;
+        shipHotControl = true;
     }
 
     public void SpeedUpButtonExit()
     {
         speed = 1;
+        shipHotControl = false;
     }
 
     void shipDistance()
     {
         dist = Vector2.Distance(shipStartPosition, gameObject.transform.position);
         heightSlider.value = dist;
+    }
+
+    void shipHotCont()
+    {
+        if (shipHotControl == true)
+        {
+            shipHot += 0.1f;
+        }else if (shipHotControl == false)
+        {
+            if (shipHot !>0)
+            {
+                shipHot -= 0.1f;
+            }
+            
+        }
+
+        if (shipHot>=100)
+        {
+            Debug.Log("ship yandı patladı kül oldu enese girdi.");
+        }
     }
 }
