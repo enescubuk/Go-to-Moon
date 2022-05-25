@@ -25,7 +25,6 @@ public class technicIndicator : MonoBehaviour
     {
         vehicleSpeed = ShipController.deadCount;
         updateNeedle();
-
     }
 
     public void updateNeedle()

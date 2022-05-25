@@ -17,6 +17,7 @@ public class shipController : MonoBehaviour
     public float fuel;
     public Vector2 shipStartPosition;
     public float dist;
+    public bool gasTankBool;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -31,7 +32,9 @@ public class shipController : MonoBehaviour
         transform.position = position;
         anger();
         shipDistance();
-        fuel = dist * 5;
+        fuel +=0.1f;
+        Debug.Log(fuel);
+
     }
     void anger()
     {
@@ -62,17 +65,17 @@ public class shipController : MonoBehaviour
         }
         if (col.gameObject.tag == "GasTank")
         {
-            fuel = 100;
+            fuel = 0;
             Destroy(col.gameObject);
         }
         if (col.gameObject.tag == "Oil")
         {
-            if (fuel<=75)
+            if (fuel<=45)
             {
-                fuel += 25;
+                fuel = 0;
             }else
             {
-                fuel = 100;
+                fuel -= 45;
             }
             Destroy(col.gameObject);
         }

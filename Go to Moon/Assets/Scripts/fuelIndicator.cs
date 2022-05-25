@@ -9,7 +9,7 @@ public class fuelIndicator : MonoBehaviour
     public GameObject needle;
     public float vehicleSpeed;
 
-    public  float startPosition=0, endPosition=180;
+    public  float startPosition=180, endPosition=0;
     public float desiredPosition;
     private float indicatorSpeed;
     public float temp;
@@ -31,11 +31,12 @@ public class fuelIndicator : MonoBehaviour
     public void updateNeedle()
     {
         desiredPosition = startPosition - endPosition;
-        temp= vehicleSpeed / 180;
+        temp = vehicleSpeed / 180;
         needle.transform.eulerAngles = new Vector3(0, 0, (startPosition - temp * desiredPosition));
         if (needle.transform.eulerAngles.z>=180)
         {
             Debug.Log("yakıt bitti");
         }
+        
     }
 }
