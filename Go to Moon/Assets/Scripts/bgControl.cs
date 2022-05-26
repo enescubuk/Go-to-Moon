@@ -6,9 +6,6 @@ public class bgControl : MonoBehaviour
 {
     public shipController _shipController;
     public Animator Animator;
-    void Start()
-    {
-    }
 
     void Update()
     {

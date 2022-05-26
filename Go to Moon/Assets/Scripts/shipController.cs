@@ -7,8 +7,7 @@ using UnityEngine.UI;
 public class shipController : MonoBehaviour
 {
     private Rigidbody2D rb;
-
-    public fuelIndicator FuelIndicator;
+    
     public Slider heightSlider;
     public float speed;
     public int coin;
@@ -24,14 +23,17 @@ public class shipController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void FixedUpdate()
     {
         float hor = Input.GetAxis("Horizontal");
         Vector3 position = transform.position;
         Vector2 movement = new Vector2(hor * speed,position.y+=(speed/100));
         rb.AddForce(movement);
         transform.position = position;
-        
+    }
+
+    void Update()
+    {
         anger();
         shipDistance();
         shipHotCont();
