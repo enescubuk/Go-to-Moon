@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class hotIndicator : MonoBehaviour
 {
@@ -32,9 +33,5 @@ public class hotIndicator : MonoBehaviour
         desiredPosition = startPosition - endPosition;
         float temp = vehicleSpeed / 100;
         needle.transform.eulerAngles = new Vector3(0, 0, (startPosition - temp * desiredPosition));
-        if (needle.transform.eulerAngles.z<=0)
-        {
-            Debug.Log("ship patladı teknik");
-        }
     }
 }

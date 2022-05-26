@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class shipController : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class shipController : MonoBehaviour
         Vector2 movement = new Vector2(hor * speed,position.y+=(speed/100));
         rb.AddForce(movement);
         transform.position = position;
+        rb.drag = 4;
     }
 
     void Update()
@@ -38,7 +40,6 @@ public class shipController : MonoBehaviour
         shipDistance();
         shipHotCont();
         fuel +=0.1f;
-        Debug.Log(dist);
 
     }
     void anger()
@@ -117,7 +118,7 @@ public class shipController : MonoBehaviour
 
     public void SpeedUpButtonExit()
     {
-        speed = 1;
+        speed /= 2;
         shipHotControl = false;
     }
 
@@ -143,7 +144,7 @@ public class shipController : MonoBehaviour
 
         if (shipHot>=100)
         {
-            Debug.Log("ship yandı patladı kül oldu enese girdi.");
+            SceneManager.LoadScene("Lose");
         }
     }
 }

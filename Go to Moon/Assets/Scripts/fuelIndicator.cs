@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class fuelIndicator : MonoBehaviour
 {
@@ -35,7 +37,7 @@ public class fuelIndicator : MonoBehaviour
         needle.transform.eulerAngles = new Vector3(0, 0, (startPosition - temp * desiredPosition));
         if (needle.transform.eulerAngles.z>=180)
         {
-            Debug.Log("yakıt bitti");
+            SceneManager.LoadScene("Lose");
         }
         
     }
