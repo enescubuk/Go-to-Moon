@@ -3795,13 +3795,57 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6608477811741905241, guid: c3776a77af7afa04e90723f0992b2afd, type: 3}
+      propertyPath: Body.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608477811741905241, guid: c3776a77af7afa04e90723f0992b2afd, type: 3}
+      propertyPath: Heads.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608477811741905241, guid: c3776a77af7afa04e90723f0992b2afd, type: 3}
+      propertyPath: Wings.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608477811741905241, guid: c3776a77af7afa04e90723f0992b2afd, type: 3}
+      propertyPath: Body.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4606572cb7af8bb43bf0b1388150e850, type: 3}
+    - target: {fileID: 6608477811741905241, guid: c3776a77af7afa04e90723f0992b2afd, type: 3}
+      propertyPath: Engines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608477811741905241, guid: c3776a77af7afa04e90723f0992b2afd, type: 3}
       propertyPath: Boosters.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6608477811741905241, guid: c3776a77af7afa04e90723f0992b2afd, type: 3}
+      propertyPath: FuelTank.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608477811741905241, guid: c3776a77af7afa04e90723f0992b2afd, type: 3}
+      propertyPath: Heads.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: d717eefbaa78576459d30d423e325a48, type: 3}
+    - target: {fileID: 6608477811741905241, guid: c3776a77af7afa04e90723f0992b2afd, type: 3}
+      propertyPath: Wings.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: f9c607b9c7739f24ebd09b406d99b698, type: 3}
+    - target: {fileID: 6608477811741905241, guid: c3776a77af7afa04e90723f0992b2afd, type: 3}
+      propertyPath: Engines.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 78a844fdd06e1d34683cb47c1a5015b2, type: 3}
+    - target: {fileID: 6608477811741905241, guid: c3776a77af7afa04e90723f0992b2afd, type: 3}
       propertyPath: Boosters.Array.data[2]
       value: 
       objectReference: {fileID: 21300000, guid: 15ca569bb0706a04e85467fef378de66, type: 3}
+    - target: {fileID: 6608477811741905241, guid: c3776a77af7afa04e90723f0992b2afd, type: 3}
+      propertyPath: Boosters.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 15ca569bb0706a04e85467fef378de66, type: 3}
+    - target: {fileID: 6608477811741905241, guid: c3776a77af7afa04e90723f0992b2afd, type: 3}
+      propertyPath: FuelTank.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6fb8dd866a6343f4b84bea251943cdb8, type: 3}
     - target: {fileID: 6608477811741905246, guid: c3776a77af7afa04e90723f0992b2afd, type: 3}
       propertyPath: m_RootOrder
       value: 2
