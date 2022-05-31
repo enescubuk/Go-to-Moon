@@ -32,6 +32,7 @@ public class shipController : MonoBehaviour
         rb.AddForce(movement);
         transform.position = position;
         rb.drag = 4;
+        
     }
 
     void Update()
@@ -40,7 +41,12 @@ public class shipController : MonoBehaviour
         shipDistance();
         shipHotCont();
         fuel +=0.1f;
+        
+        if (Input.GetKey(KeyCode.A))
+            transform.Rotate(-Vector3.back * speed * Time.deltaTime);
 
+        if (Input.GetKey(KeyCode.D))
+            transform.Rotate(Vector3.back * speed * Time.deltaTime);
     }
     void anger()
     {

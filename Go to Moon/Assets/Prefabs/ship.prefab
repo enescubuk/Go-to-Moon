@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1227200097736046638}
   m_Layer: 0
   m_Name: ship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227200097736046636}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.21, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
@@ -97,15 +97,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cbf892efe99fa94e8941809abafc828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  heightSlider: {fileID: 0}
+  speed: 10
+  coin: 0
   coinText: {fileID: 0}
-  coinGO: {fileID: 4522294772254096329, guid: 8df97f3ceff9c7640afa2361542433db, type: 3}
-  helicopterGO: {fileID: 0}
-  birdGO: {fileID: 0}
-  technicalGO: {fileID: 0}
-  speedUpGO: {fileID: 0}
-  oilTankGO: {fileID: 0}
-  oilGO: {fileID: 0}
+  deadCount: 0
+  fuel: 0
+  shipStartPosition: {x: 0, y: -2.55}
+  dist: 0
+  shipHot: 0
+  shipHotControl: 0
 --- !u!61 &1227200097736046639
 BoxCollider2D:
   m_ObjectHideFlags: 0
