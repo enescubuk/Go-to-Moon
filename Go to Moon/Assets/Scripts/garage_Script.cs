@@ -1,9 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class garage_Script : MonoBehaviour
 {
+    [Header("Coins")]
+    public int coin;
+    [SerializeField] int coinDecrease10;
+    [SerializeField] int coinDecrease20;
+
     [SerializeField] int maxValue;
     [Header("Specs")]
     public float speed;
@@ -33,6 +40,17 @@ public class garage_Script : MonoBehaviour
     public GameObject BodyPart;
     public GameObject HeadsPart;
 
+    [Header("Coins")]
+    [SerializeField] TextMeshProUGUI RigidityText;
+    [SerializeField] TextMeshProUGUI EngineText;
+    [SerializeField] TextMeshProUGUI WingText;
+    [SerializeField] TextMeshProUGUI AccelerateText;
+    [SerializeField] TextMeshProUGUI FuelText;
+    [SerializeField] TextMeshProUGUI SpeedText;
+    [SerializeField] TextMeshProUGUI DurabilityText;
+    [SerializeField] TextMeshProUGUI DurationText;
+    [SerializeField] TextMeshProUGUI CoinText;
+
 
     private void Awake()
     {
@@ -55,10 +73,28 @@ public class garage_Script : MonoBehaviour
     }    
     void Update()
     {
+        TextFunc();
         SpecCheck();
         //
         RocketPartCheck();
         PlayerPrefsFunc();
+    }
+
+    void TextFunc()
+    {
+
+
+        RigidityText.text = "Lvl: " + (rigidity);
+        EngineText.text = "Lvl: " + (engine);
+        WingText.text = "Lvl: " + (wing);
+        AccelerateText.text = "Lvl: " + (accelerate);
+        FuelText.text = "Lvl: " + (fuel);
+
+        SpeedText.text = "Speed Lvl: \n" + (speed);
+        DurabilityText.text = "Durability Lvl: \n" + (durability);
+        DurationText.text = "Duration Lvl: \n" + (duration);
+
+        CoinText.text =  ""+ (coin) + " :Gold";
     }
 
     void PlayerPrefsFunc()
@@ -89,32 +125,34 @@ public class garage_Script : MonoBehaviour
     }
     void RocketPartCheck()
     {
-        if (wing % 3 == 0)
-        {
-           WingsPart.GetComponent<SpriteRenderer>().sprite = Wings[(wing / 3)];
-        }
-        if (rigidity % 3 == 0)
-        {
-            BodyPart.GetComponent<SpriteRenderer>().sprite = Body[(rigidity / 3)];
-            HeadsPart.GetComponent<SpriteRenderer>().sprite = Heads[(rigidity / 3)];
-        }
-        if (accelerate % 3 == 0)
-        {
-            BoostersPart.GetComponent<SpriteRenderer>().sprite = Boosters[(accelerate / 3)];
-        }
-        if (fuel % 3 == 0)
-        {
-            FuelTankPart.GetComponent<SpriteRenderer>().sprite = FuelTank[(fuel / 3)];
-        }
-        if (engine % 3 == 0)
-        {
-            EnginesPart.GetComponent<SpriteRenderer>().sprite = Engines[(engine / 3)];
-        }
+        //if (wing % 3 == 0)
+       // {
+           WingsPart.GetComponent<SpriteRenderer>().sprite = Wings[Mathf.FloorToInt(PlayerPrefs.GetInt("wing") / 3)];
+       // }
+      //  if (rigidity % 3 == 0)
+       // {
+            BodyPart.GetComponent<SpriteRenderer>().sprite = Body[Mathf.FloorToInt(PlayerPrefs.GetInt("rigidity") / 3)];
+            HeadsPart.GetComponent<SpriteRenderer>().sprite = Heads[Mathf.FloorToInt(PlayerPrefs.GetInt("rigidity") / 3)];
+        //}
+       // if (accelerate % 3 == 0)
+       // {
+            BoostersPart.GetComponent<SpriteRenderer>().sprite = Boosters[(PlayerPrefs.GetInt("accelerate") / 3)];
+       // }
+        //if (fuel % 3 == 0)
+      //  {
+            FuelTankPart.GetComponent<SpriteRenderer>().sprite = FuelTank[(PlayerPrefs.GetInt("fuel") / 3)];
+      //  }
+       // if (engine % 3 == 0)
+      //  {
+            EnginesPart.GetComponent<SpriteRenderer>().sprite = Engines[(PlayerPrefs.GetInt("engine") / 3)];
+      //  }
     }
     public void RigidityUpgrade()
     {
         if (rigidity < maxValue)
         {
+            coin -= coinDecrease10;
+            coinDecrease10 *= 2;
             rigidity++;
         }
         
@@ -124,6 +162,8 @@ public class garage_Script : MonoBehaviour
     {
         if (engine < maxValue)
         {
+            coin -= coinDecrease20;
+            coinDecrease10 *= 2;
             engine++;
         }
         
@@ -133,6 +173,8 @@ public class garage_Script : MonoBehaviour
     {
         if (wing < maxValue)
         {
+            coin -= coinDecrease10;
+            coinDecrease10 *= 2;
             wing++;
         }
         
@@ -142,6 +184,8 @@ public class garage_Script : MonoBehaviour
     {
         if (accelerate < maxValue)
         {
+            coin -= coinDecrease10;
+            coinDecrease10 *= 2;
             accelerate++;
         }
         
@@ -151,9 +195,9 @@ public class garage_Script : MonoBehaviour
     {
         if (fuel < maxValue)
         {
+            coin -= coinDecrease20;
+            coinDecrease10 *= 2;
             fuel++;
         }
-        
-
     }
 }
