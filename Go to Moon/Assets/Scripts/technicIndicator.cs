@@ -13,12 +13,12 @@ public class technicIndicator : MonoBehaviour
     private float desiredPosition;
     private float indicatorSpeed;
 
-
+    public GameObject loseScene;
 
 
     void Start()
     {
-       
+        loseScene.SetActive(false);
     }
 
     void FixedUpdate()
@@ -35,6 +35,9 @@ public class technicIndicator : MonoBehaviour
         if (needle.transform.eulerAngles.z<=0)
         {
             Debug.Log("ship patladı teknik");
+            loseScene.SetActive(true);
+            Time.timeScale = 0;
+
         }
     }
 }

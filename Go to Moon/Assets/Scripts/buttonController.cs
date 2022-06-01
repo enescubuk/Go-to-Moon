@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class buttonController : MonoBehaviour
 {
     static string lastScene;
+    public GameObject pauseMenu;
     // Start is called before the first frame update
     void Start()
     {
-        
+        pauseMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,7 +27,7 @@ public class buttonController : MonoBehaviour
 
     public void mainMenuButton()
     {
-        //main menü button
+        SceneManager.LoadScene("Start");
     }
     public void garageButton()
     {
@@ -56,6 +57,7 @@ public class buttonController : MonoBehaviour
     {
         //restart
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
     public void backButton()
     {
@@ -80,5 +82,15 @@ public class buttonController : MonoBehaviour
     public void lastScenewithButton()
     {
         lastScene = SceneManager.GetActiveScene().name;
+    }
+    public void puaseMenu()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void pauseBack()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
     }
 }
