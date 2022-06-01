@@ -24,7 +24,7 @@ public class garage_Script : MonoBehaviour
     public int accelerate;
     public int fuel;
 
-    [Header("RocketParts")]
+   /* [Header("RocketParts")]
     public Sprite[] Wings;
     public Sprite[] Boosters;
     public Sprite[] Engines;
@@ -38,7 +38,7 @@ public class garage_Script : MonoBehaviour
     public GameObject EnginesPart;
     public GameObject FuelTankPart;
     public GameObject BodyPart;
-    public GameObject HeadsPart;
+    public GameObject HeadsPart;*/
 
     [Header("Coins")]
     [SerializeField] TextMeshProUGUI RigidityText;
@@ -76,7 +76,7 @@ public class garage_Script : MonoBehaviour
         TextFunc();
         SpecCheck();
         //
-        RocketPartCheck();
+        //RocketPartCheck();
         PlayerPrefsFunc();
     }
 
@@ -123,7 +123,7 @@ public class garage_Script : MonoBehaviour
         durability = (rigidity) + (wing);
         duration = (rigidity / 2) + (fuel);
     }
-    void RocketPartCheck()
+   /* void RocketPartCheck()
     {
         //if (wing % 3 == 0)
        // {
@@ -146,7 +146,7 @@ public class garage_Script : MonoBehaviour
       //  {
             EnginesPart.GetComponent<SpriteRenderer>().sprite = Engines[(PlayerPrefs.GetInt("engine") / 3)];
       //  }
-    }
+    }*/
     public void RigidityUpgrade()
     {
         if (rigidity < maxValue)
