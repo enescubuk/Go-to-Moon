@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class shipController : MonoBehaviour
 {
     private Rigidbody2D rb;
-    
     public Slider heightSlider;
     public float speed;
     public int coin;
@@ -19,22 +18,17 @@ public class shipController : MonoBehaviour
     public float dist;
     public float shipHot;
     public bool shipHotControl;
+    private int count = 3;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    private void FixedUpdate()
-    {
-        float hor = Input.GetAxis("Horizontal");
-        Vector3 position = transform.position;
-        Vector2 movement = new Vector2(hor * speed,position.y+=(speed/100));
-        rb.AddForce(movement);
-        transform.position = position;
-        rb.drag = 4;
         
     }
+    private void FixedUpdate()
+    {
+        Invoke("movement", 3f);
 
+    }
     void Update()
     {
         anger();
@@ -48,6 +42,17 @@ public class shipController : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
             transform.Rotate(Vector3.back * speed * Time.deltaTime);
     }
+    
+    /*IEnumerator Countdown(int second)
+    {
+       count = second;
+        while (count>0)
+        {
+            yield return new WaitForSeconds(1);
+            count--;
+            Debug.Log(count);
+        }
+    }*/
     void anger()
     {
         if (transform.position.x == -2.35f && transform.position.x== 2.35f)
@@ -57,7 +62,16 @@ public class shipController : MonoBehaviour
         float xPosition = Mathf.Clamp(transform.position.x, -2.35f, 2.35f);
         transform.position = new Vector3(xPosition, transform.position.y,transform.position.z);
     }
-
+    void movement()
+    {
+        float hor = Input.GetAxis("Horizontal");
+        Vector3 position = transform.position;
+        Vector2 movement = new Vector2(hor * speed,position.y+=(speed/100));
+        rb.AddForce(movement);
+        transform.position = position;
+        rb.drag = 4;
+        
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Coin")

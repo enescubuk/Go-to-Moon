@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3469953585574198860}
   - component: {fileID: 1504861257275068477}
-  - component: {fileID: 8900533168989433298}
+  - component: {fileID: 1451941214}
+  - component: {fileID: 3649486003640010215}
   m_Layer: 0
   m_Name: bird
   m_TagString: Bird
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8900533168989433298
+--- !u!61 &1451941214
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,3 +110,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47, y: 0.45}
   m_EdgeRadius: 0
+--- !u!114 &3649486003640010215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611203680188661633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2da65d86c75ca4b81bba5f03249231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _patrolRange: 0
+  _moveSpeed: 0

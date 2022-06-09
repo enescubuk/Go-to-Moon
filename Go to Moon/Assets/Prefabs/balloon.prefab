@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1721188591506048782}
   - component: {fileID: 5751806050781820723}
   - component: {fileID: 8770705532921963065}
+  - component: {fileID: 6396192963303911593}
   m_Layer: 0
   m_Name: balloon
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,3 +110,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.58, y: 0.87}
   m_EdgeRadius: 0
+--- !u!114 &6396192963303911593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2958658623058163004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2da65d86c75ca4b81bba5f03249231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _patrolRange: 2.7
+  _moveSpeed: 1
