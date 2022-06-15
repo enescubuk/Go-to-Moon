@@ -19,10 +19,13 @@ public class shipController : MonoBehaviour
     public float shipHot;
     public bool shipHotControl;
     private int count = 3;
+    public int rotationSpeed;
+    public int horSpeed;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+        Invoke("startFuel", 3f);
+
     }
     private void FixedUpdate()
     {
@@ -37,10 +40,10 @@ public class shipController : MonoBehaviour
         fuel +=0.1f;
         
         if (Input.GetKey(KeyCode.A))
-            transform.Rotate(-Vector3.back * speed * Time.deltaTime);
+            transform.Rotate(-Vector3.back * rotationSpeed * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.D))
-            transform.Rotate(Vector3.back * speed * Time.deltaTime);
+            transform.Rotate(Vector3.back * rotationSpeed * Time.deltaTime);
     }
     
     /*IEnumerator Countdown(int second)
@@ -64,13 +67,14 @@ public class shipController : MonoBehaviour
     }
     void movement()
     {
+        
         float hor = Input.GetAxis("Horizontal");
         Vector3 position = transform.position;
-        Vector2 movement = new Vector2(hor * speed,position.y+=(speed/100));
+        Vector2 movement = new Vector2(hor * horSpeed,position.y+=(speed/100));
         rb.AddForce(movement);
         transform.position = position;
         rb.drag = 4;
-        
+
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -142,6 +146,10 @@ public class shipController : MonoBehaviour
         shipHotControl = false;
     }
 
+    void startFuel()
+    {
+        fuel = 0;
+    }
     void shipDistance()
     {
         dist = Vector2.Distance(shipStartPosition, gameObject.transform.position);

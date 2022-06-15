@@ -9,19 +9,16 @@ public class fuelIndicator : MonoBehaviour
 {
     public shipController ShipController;
     public GameObject needle;
-    public float vehicleSpeed;
+    public static float vehicleSpeed;
 
     public  float startPosition=180, endPosition=0;
     public float desiredPosition;
     private float indicatorSpeed;
     public float temp;
 
-
-
-
-    void Start()
+    private void Start()
     {
-       
+        
     }
 
     void FixedUpdate()
@@ -33,12 +30,15 @@ public class fuelIndicator : MonoBehaviour
     public void updateNeedle()
     {
         desiredPosition = startPosition - endPosition;
-        temp = vehicleSpeed / 180;
-        needle.transform.eulerAngles = new Vector3(0, 0, (startPosition - temp * desiredPosition));
-        if (needle.transform.eulerAngles.z>=180)
-        {
-            SceneManager.LoadScene("Lose");
-        }
-        
+                temp = vehicleSpeed / 180;
+                needle.transform.eulerAngles = new Vector3(0, 0, (startPosition - temp * desiredPosition));
+                if (needle.transform.eulerAngles.z>=180)
+                { 
+                    SceneManager.LoadScene("Lose");
+                }
     }
+
+
+
+
 }
