@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class fuelIndicator : MonoBehaviour
 {
+    public GameObject pauseMenu;
     public shipController ShipController;
     public GameObject needle;
     public static float vehicleSpeed;
@@ -34,7 +35,7 @@ public class fuelIndicator : MonoBehaviour
                 needle.transform.eulerAngles = new Vector3(0, 0, (startPosition - temp * desiredPosition));
                 if (needle.transform.eulerAngles.z>=180)
                 { 
-                    SceneManager.LoadScene("Lose");
+                    pauseMenu.SetActive(true);
                 }
     }
 

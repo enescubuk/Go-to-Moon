@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class shipController : MonoBehaviour
 {
+    public GameObject pauseMenu;
     private Rigidbody2D rb;
     public Slider heightSlider;
     public float speed;
@@ -172,7 +173,8 @@ public class shipController : MonoBehaviour
 
         if (shipHot>=100)
         {
-            SceneManager.LoadScene("Lose");
+            //SceneManager.LoadScene("Lose");
+            pauseMenu.SetActive(true);
         }
     }
 }

@@ -370,6 +370,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1959749857, guid: 04d89c26f4cfd534e8095e84040f96bf, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 8424472776989174419, guid: 76e14b006eb6d164caccf605db0511f9, type: 3}
+    - target: {fileID: 1959749857, guid: 04d89c26f4cfd534e8095e84040f96bf, type: 3}
       propertyPath: heightSlider
       value: 
       objectReference: {fileID: 1859175808}
@@ -2996,6 +3000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 156c43b1c99bbe9409ac060705788ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 8424472776989174419, guid: 76e14b006eb6d164caccf605db0511f9, type: 3}
   ShipController: {fileID: 1959749857}
   needle: {fileID: 8636230261264123160}
   startPosition: 0
