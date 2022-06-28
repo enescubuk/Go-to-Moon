@@ -35,7 +35,9 @@ public class fuelIndicator : MonoBehaviour
                 needle.transform.eulerAngles = new Vector3(0, 0, (startPosition - temp * desiredPosition));
                 if (needle.transform.eulerAngles.z>=180)
                 { 
+                    Time.timeScale = 0;
                     pauseMenu.SetActive(true);
+                    Debug.Log("31");
                 }
     }
 

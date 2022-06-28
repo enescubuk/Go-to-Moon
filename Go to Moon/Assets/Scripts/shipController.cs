@@ -174,6 +174,7 @@ public class shipController : MonoBehaviour
         if (shipHot>=100)
         {
             //SceneManager.LoadScene("Lose");
+            Time.timeScale = 0;
             pauseMenu.SetActive(true);
         }
     }
