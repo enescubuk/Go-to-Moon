@@ -7274,6 +7274,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1959749857, guid: 04d89c26f4cfd534e8095e84040f96bf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3368586184235198782, guid: 04d89c26f4cfd534e8095e84040f96bf, type: 3}
       propertyPath: m_Name
       value: Ship1
@@ -7281,6 +7285,18 @@ PrefabInstance:
     - target: {fileID: 3368586184235198783, guid: 04d89c26f4cfd534e8095e84040f96bf, type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3368586184235198783, guid: 04d89c26f4cfd534e8095e84040f96bf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3368586184235198783, guid: 04d89c26f4cfd534e8095e84040f96bf, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3368586184235198783, guid: 04d89c26f4cfd534e8095e84040f96bf, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3368586184235198783, guid: 04d89c26f4cfd534e8095e84040f96bf, type: 3}
       propertyPath: m_LocalPosition.x
